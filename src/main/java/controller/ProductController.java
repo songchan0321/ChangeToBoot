@@ -3,9 +3,7 @@ package controller;
 import java.io.File;
 import java.util.Map;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,12 +18,11 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.model2.mvc.common.Page;
-import com.model2.mvc.common.Search;
-import com.model2.mvc.service.domain.Product;
-import com.model2.mvc.service.product.ProductService;
+import common.Page;
+import common.Search;
 import domain.Product;
 import service.ProductService;
+import serviceImpl.ProductServiceImpl;
 
 @Controller
 @RequestMapping("/product/*")
@@ -59,31 +56,31 @@ public class ProductController {
 	
 	@RequestMapping(value = "addProduct", method = RequestMethod.POST)
 	public ModelAndView addProduct(@ModelAttribute("product") Product product, MultipartHttpServletRequest request) throws Exception {
-	    // "path" ������ "addProduct : POST" �޽����� ���
+
 	    System.out.println(path);
 	    System.out.println("addProduct : POST");
 
-	    // ���� ���ε带 ���� ��Ƽ��Ʈ���� ���� ���� ������
+
 	    Map<String, MultipartFile> files = request.getFileMap();
 	    
-	    // uploadFile ���� ����
+
 	    CommonsMultipartFile cmf = (CommonsMultipartFile) files.get("uploadFile");
 	    
-	    // ������ ������ ��θ� ���� (��� + ���� �̸�)
+
 	    String uploadPath = path + cmf.getOriginalFilename();
 	    
-	    // ���� ��ü �����ϰ� ���ε� ��η� �̵���Ŵ
+
 	    File file = new File(uploadPath);
 	    System.out.println(uploadPath);
 	    cmf.transferTo(file);
 	    
-	    // Product ��ü�� ���� �̸� ����
+
 	    product.setFileName(cmf.getOriginalFilename());
 	    
-	    // ProductService�� ����Ͽ� ��ǰ�� �߰�
+
 	    productService.addProduct(product);
 
-	    // addProductResult.jsp�� �̵� + ��ǰ ���� ����
+
 	    return new ModelAndView("forward:/product/addProductResult.jsp", "product", product);
 	}
 
