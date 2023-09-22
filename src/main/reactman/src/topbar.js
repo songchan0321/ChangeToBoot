@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+
 function BasicExample() {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -13,7 +14,7 @@ function BasicExample() {
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Products</Nav.Link>
-                        <NavDropdown title="Convenience Feature" id="basic-nav-dropdown">
+                        <NavDropdown title="Convenience Features" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">인사말</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
                                 찾아 오시는 길
