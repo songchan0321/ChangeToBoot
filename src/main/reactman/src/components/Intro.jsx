@@ -1,14 +1,16 @@
 import React from "react";
 
+import about from "../assets/img/about.jpg";
+
+import { introText } from "../constants";
+
 const Intro = () => {
-    const introText = {
-        title: "port developer",
-        desc: ["talent is", "found at the end of the", "effort"],
-    };
     return (
         <section id="intro">
             <div className="intro__inner">
-                <h1 className="intro__title">{introText.title}</h1>
+                <h2 className="intro__title">
+                    {introText.title}
+                </h2>
                 <div className="intro__lines" aria-hidden="true">
                     <span className="line"></span>
                     <span className="line"></span>
@@ -25,7 +27,7 @@ const Intro = () => {
                         <div>{introText.desc[2]}</div>
                     </div>
                     <div className="img">
-                        <img src={about} alt="어바웃" />
+                        <img src={about} alt="어바웃미" />
                     </div>
                 </div>
                 <div className="intro__lines bottom" aria-hidden="true">
@@ -39,5 +41,7 @@ const Intro = () => {
                 </div>
             </div>
         </section>
-    );
-};
+    )
+}
+
+export default Intro;
