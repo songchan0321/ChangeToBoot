@@ -30,11 +30,20 @@ const Site = () => {
             ],
         },
         {
-            text: ["Bag", "가방 또한 패션입니다."],
+            text: ["Bag", "가방 또한 패션입니다"],
             title: "다양한 브랜드의 가방",
             Link: "https://www.musinsa.com/app/",
             info: [
                 "bags",
+                "women's and men's",
+            ],
+        },
+        {
+            text: ["Shoes", "패션의 완성, 슈즈"],
+            title: "여러 패션슈즈들을 만나보세요.",
+            Link: "https://www.musinsa.com/app/",
+            info: [
+                "shoes",
                 "women's and men's",
             ],
         },

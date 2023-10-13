@@ -18,7 +18,7 @@ const headerNav = [
         url: "#port"
     },
     {
-        title: "contact",
+        title: "customer service",
         url: "#contact"
     }
 ];
