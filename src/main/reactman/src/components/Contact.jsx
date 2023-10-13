@@ -10,6 +10,12 @@ const contactText = [
         link: "mailto:mysticsong@naver.com",
         title: "mail : mysticsong@naver.com",
     },
+    {
+        link: "https://chan0321.tistory.com/",
+        title: "blog : https://chan0321.tistory.com/",
+
+
+    },
 ];
 const Contact = () => {
     return <div className="contact__text">
