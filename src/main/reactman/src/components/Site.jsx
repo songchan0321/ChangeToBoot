@@ -3,54 +3,46 @@ import React from "react";
 const Site = () => {
     const siteText = [
         {
-            text: ["make", "site compliant with", "webstandard"],
-            title: "비트를 이용한 사이트 제작",
-            code: "https://github.com/webstoryboy/port2023-vite",
-            view: "https://port2023-vite.netlify.app",
+            text: ["Top", "스타일과 편안함을 완벽하게 조화시킨 상의"],
+            title: "다양한 브랜드의 상의를 만나보세요",
+            Link: "https://www.musinsa.com/app/",
             info: [
-                "site coding",
-                "production period : two days",
-                "use stack : HTML5/CSS3, CSS Variable, Vite",
+                "clothes",
+                "top",
             ],
         },
         {
-            text: ["make", "site compliant with", "react.js"],
-            title: "리액트를 이용한 사이트 제작",
-            code: "https://github.com/webstoryboy/port2023-react",
-            view: "https://port2023-react.netlify.app",
+            text: ["Outer", "스타일을 강조한 아우터"],
+            title: "모든 계절에 완벽하게 어울리며, 아우터의 새로운 정의를 제시합니다.",
+            Link: "https://www.musinsa.com/app/",
             info: [
-                "site coding",
-                "production period : two days",
-                "use stack : HTML5/CSS3, CSS Variable, Vite",
+                "clothes",
+                "outer",
             ],
         },
         {
-            text: ["make", "site compliant with", "vue.js"],
-            title: "뷰를 이용한 사이트 제작",
-            code: "https://github.com/webstoryboy/port2023-vue",
-            view: "https://port2023-vue.netlify.app",
+            text: ["Pants", "고급스러운 스타일의 다양한 하의"],
+            title: "고급스러운 하의 모음전",
+            Link: "https://www.musinsa.com/app/",
             info: [
-                "site coding",
-                "production period : two days",
-                "use stack : HTML5/CSS3, Scss Variable, vue",
+                "clothes",
+                "pants",
             ],
         },
         {
-            text: ["make", "site compliant with", "next.js"],
-            title: "넥스트를 이용한 사이트 제작",
-            code: "https://github.com/webstoryboy/port2023-next",
-            view: "https://port2023-next.netlify.app",
+            text: ["Bag", "가방 또한 패션입니다."],
+            title: "다양한 브랜드의 가방",
+            Link: "https://www.musinsa.com/app/",
             info: [
-                "site coding",
-                "production period : two days",
-                "use stack : HTML5/CSS3, Scss Variable, next.js",
+                "bags",
+                "women's and men's",
             ],
         },
     ];
     return (
         <section id="site">
             <div className="site__inner">
-                <h2 className="site__title">Site coding <em>나의 작업물</em></h2>
+                <h2 className="site__title">Products<em>     상품</em></h2>
                 <div className="site__wrap">
                     {siteText.map((site, key) => (
                         <article className={`site__item s${key+1}`} key={key}>
@@ -64,8 +56,7 @@ const Site = () => {
                                 {site.title}
                             </h3>
                             <div className="btn">
-                                <a href={site.code}>code</a>
-                                <a href={site.view}>view</a>
+                                <a href={site.Link}>Link</a>
                             </div>
                             <div className="info">
                                 <span>{site.info[0]}</span>

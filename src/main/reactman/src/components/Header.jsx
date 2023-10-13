@@ -2,19 +2,19 @@ import React, { useState } from "react";
 
 const headerNav = [
     {
-        title: "intro",
+        title: "main",
         url: "#intro"
     },
     {
-        title: "skill",
+        title: "object",
         url: "#skill"
     },
     {
-        title: "site",
+        title: "products",
         url: "#site"
     },
     {
-        title: "portfolio",
+        title: "best items",
         url: "#port"
     },
     {
@@ -34,7 +34,7 @@ const Header = () => {
         <header id="header" role="banner">
             <div className="header__inner">
                 <div className="header__logo">
-                    <a href="/">portfolio<em>react.js</em></a>
+                    <a href="/">Chan Store<em>fashion</em></a>
                 </div>
                 <nav className={`header__nav ${show ? "show" : ""}`} role="navigation" aria-label="메인 메뉴">
                     <ul>

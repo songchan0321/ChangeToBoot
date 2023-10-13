@@ -4,7 +4,7 @@ import React from "react";
 const contactText = [
     {
         link: "https://github.com/songchan0321",
-        title: "github : songchan0321",
+        title: "github : https://github.com/songchan0321",
     },
     {
         link: "mailto:mysticsong@naver.com",
