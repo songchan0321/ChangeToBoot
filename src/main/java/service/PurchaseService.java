@@ -2,8 +2,7 @@ package service;
 
 import java.util.Map;
 
-import com.model2.mvc.common.Search;
-import com.model2.mvc.service.domain.Purchase;
+import common.Search;
 import domain.Purchase;
 
 public interface PurchaseService {

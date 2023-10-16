@@ -9,12 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.model2.mvc.common.Search;
-import com.model2.mvc.service.domain.Product;
-import com.model2.mvc.service.domain.Purchase;
-import com.model2.mvc.service.purchase.PurchaseDao;
-import com.model2.mvc.service.purchase.PurchaseService;
-import purchase.PurchaseDao;
+import common.Search;
+import domain.Product;
+import domain.Purchase;
+import repository.PurchaseRepository;
 import service.PurchaseService;
 
 @Service("purchaseServiceImpl")
@@ -22,7 +20,7 @@ public class PurchaseServiceImpl implements PurchaseService {
 
 	@Autowired
 	@Qualifier("purchaseDaoImpl")
-	PurchaseDao purchaseDao;
+	PurchaseService purchaseService;
 	
 	public PurchaseServiceImpl() {
 		System.out.println("::" + getClass() + "�⺻ ������ ȣ��....");
@@ -30,22 +28,22 @@ public class PurchaseServiceImpl implements PurchaseService {
 
 	@Override
 	public void addPurchase(Purchase purchase) throws Exception {
-		purchaseDao.addPurchase(purchase);
+		PurchaseService.addPurchase(purchase);
 	}
 
 	@Override
 	public Purchase getPurchase(int tranNo) throws Exception {
-		return purchaseDao.getPurchase(tranNo);
+		return PurchaseService.getPurchase(tranNo);
 	}
 
 	@Override
 	public Purchase getPurchase2(int prodNo) throws Exception {
-		return purchaseDao.getPurchase2(prodNo);
+		return PurchaseService.getPurchase2(prodNo);
 	}
 
 	@Override
 	public Map<String, Object> getPurchaseList(Search search, String buyerId) throws Exception {
-		List<Object> list = purchaseDao.getPurchaseList(search, buyerId);
+		List<Object> list = PurchaseService.getPurchaseList(search, buyerId);
 		int totalCount = 0;
 		if(list.size()>0) totalCount=((Purchase)list.get(0)).getCount();
 		
@@ -59,11 +57,11 @@ public class PurchaseServiceImpl implements PurchaseService {
 
 	@Override
 	public void updatePurchase(Purchase purchase) throws Exception {
-		purchaseDao.updatePurchase(purchase);
+		PurchaseService.updatePurchase(purchase);
 	}
 	@Override
 	public void updateTranCode(Purchase purchase) throws Exception {
-		purchaseDao.updateTranCode(purchase);
+		PurchaseService.updateTranCode(purchase);
 	}
 
 

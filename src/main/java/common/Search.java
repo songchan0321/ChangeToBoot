@@ -1,12 +1,17 @@
 package common;
 
 
+import lombok.Getter;
+
 public class Search {
 	
 	///Field
+	@Getter
 	private int currentPage;
 	private String searchCondition;
 	private String searchKeyword;
+	///Method
+	@Getter
 	private int pageSize;
 	private String orderCondition;
 	private int endRowNum;
@@ -15,19 +20,12 @@ public class Search {
 	///Constructor
 	public Search() {
 	}
-	
-	
-	///Method
-	public int getPageSize() {
-		return pageSize;
+
+
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
 	}
-	public void setPageSize(int paseSize) {
-		this.pageSize = paseSize;
-	}
-	
-	public int getCurrentPage() {
-		return currentPage;
-	}
+
 	public void setCurrentPage(int curruntPage) {
 		this.currentPage = curruntPage;
 	}

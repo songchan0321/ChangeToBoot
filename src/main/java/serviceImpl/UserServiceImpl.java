@@ -9,15 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.model2.mvc.common.Search;
-import com.model2.mvc.service.domain.User;
-import com.model2.mvc.service.user.UserService;
-import com.model2.mvc.service.user.UserDao;
+import common.Search;
+import domain.User;
 import service.UserService;
-import users.UserDao;;
+import repository.UserRepository;
+import service.UserService;
 
 
-//==> ȸ������ ���� ����
+
 @Service("userServiceImpl")
 public class UserServiceImpl implements UserService {
 	

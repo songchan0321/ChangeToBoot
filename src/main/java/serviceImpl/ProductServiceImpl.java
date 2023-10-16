@@ -9,11 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.model2.mvc.common.Search;
-import com.model2.mvc.service.domain.Product;
-import com.model2.mvc.service.product.ProductDao;
-import com.model2.mvc.service.product.ProductService;
-import product.ProductDao;
+import common.Search;
+import domain.Product;
+import repository.ProductRepository;
 import service.ProductService;
 
 @Service("productServiceImpl")
@@ -21,7 +19,7 @@ public class ProductServiceImpl implements ProductService {
 
 	@Autowired
 	@Qualifier("productDaoImpl")
-	ProductDao productDao;
+	ProductService productService;
 
 	public ProductServiceImpl() {
 		System.out.println("::" + getClass() + ".default Constructor Call....");
@@ -29,22 +27,22 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public int addProduct(Product product) throws Exception {
-		return productDao.addProduct(product);
+		return productService.addProduct(product);
 	}
 
 	@Override
 	public Product getProduct(int prodNo) throws Exception {
-		return productDao.getProduct(prodNo);
+		return productService.getProduct(prodNo);
 	}
 
 	@Override
 	public int updateProduct(Product product) throws Exception {
-		return productDao.updateProduct(product);
+		return productService.updateProduct(product);
 	}
 
 	@Override
 	public Map<String , Object > getProductList(Search search) throws Exception {
-		List<Object> list = productDao.getProductList(search);
+		List<Object> list = productService.getProductList(search);
 		int totalCount = 0;
 		if(list.size()>0) totalCount=((Product)list.get(0)).getCount();
 		
