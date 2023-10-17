@@ -3,19 +3,14 @@ package controller;
 import java.io.File;
 import java.util.Map;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.multipart.commons.*;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import common.Page;
@@ -24,21 +19,20 @@ import domain.Product;
 import service.ProductService;
 import serviceImpl.ProductServiceImpl;
 
-@Controller
-@RequestMapping("/product/*")
+@RestController
+@RequestMapping("/product")
 public class ProductController {
 
-	/// Field
 	@Autowired
-	@Qualifier("productServiceImpl")
 	private ProductService productService;
 
-	@Value("#{commonProperties['pageUnit']}")
+	@Value("${commonProperties.pageUnit}")
 	int pageUnit;
-	@Value("#{commonProperties['pageSize']}")
+
+	@Value("${commonProperties.pageSize}")
 	int pageSize;
-	
-	@Value("#{commonProperties['path']}")
+
+	@Value("${commonProperties.path}")
 	String path;
 	
 	public ProductController() {

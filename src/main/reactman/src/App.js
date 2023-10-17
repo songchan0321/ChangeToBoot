@@ -10,7 +10,6 @@ const App = () => {
         link();
     }, []);
 
-
     return (
         <BrowserRouter>
             <Routes>

@@ -8,7 +8,6 @@ const portText = [
     {
         num: "01",
         title: "Thom Brown 4바 가디건",
-
         img: port01,
         code: "https://www.musinsa.com/app/goods/3437285",
         view: "https://www.musinsa.com/app/goods/3437285",

@@ -40,7 +40,7 @@ const Site = () => {
         },
         {
             text: ["Shoes", "패션의 완성, 슈즈"],
-            title: "여러 패션슈즈들을 만나보세요.",
+            title: "여러 패션슈즈를 만나보세요.",
             Link: "https://www.musinsa.com/app/",
             info: [
                 "shoes",

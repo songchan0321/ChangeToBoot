@@ -13,7 +13,6 @@ import common.Search;
 import domain.User;
 import service.UserService;
 import repository.UserRepository;
-import service.UserService;
 
 
 
@@ -23,9 +22,9 @@ public class UserServiceImpl implements UserService {
 	///Field
 	@Autowired
 	@Qualifier("userDaoImpl")
-	private UserDao userDao;
-	public void setUserDao(UserDao userDao) {
-		this.userDao = userDao;
+	private UserService userService;
+	public void setUserDao(UserService userService) {
+		this.userService = userService;
 	}
 	
 	///Constructor
@@ -35,16 +34,16 @@ public class UserServiceImpl implements UserService {
 
 	///Method
 	public void addUser(User user) throws Exception {
-		userDao.addUser(user);
+		userService.addUser(user);
 	}
 
 	public User getUser(String userId) throws Exception {
-		return userDao.getUser(userId);
+		return userService.getUser(userId);
 	}
 
 	public Map<String , Object > getUserList(Search search) throws Exception {
-		List<User> list= userDao.getUserList(search);
-		int totalCount = userDao.getTotalCount(search);
+		List<User> list= userService.getUserList(search);
+		int totalCount = userService.getTotalCount(search);
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("list", list );
@@ -54,12 +53,12 @@ public class UserServiceImpl implements UserService {
 	}
 
 	public void updateUser(User user) throws Exception {
-		userDao.updateUser(user);
+		userService.updateUser(user);
 	}
 
 	public boolean checkDuplication(String userId) throws Exception {
 		boolean result=true;
-		User user=userDao.getUser(userId);
+		User user=userService.getUser(userId);
 		if(user != null) {
 			result=false;
 		}
