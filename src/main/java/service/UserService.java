@@ -3,7 +3,7 @@ package service;
 import java.util.Map;
 
 import common.Search;
-import domain.User;
+import dto.User;
 
 
 

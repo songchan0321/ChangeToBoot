@@ -1,11 +1,12 @@
-package model;
+package entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.util.Date;
 
 @Entity
 @Table(name = "product")
@@ -13,7 +14,7 @@ import java.util.Date;
 @Setter
 @ToString
 
-public class UserEntity {
+public class PurchaseEntity {
 
     @Id
     @Column(name = "user_id", nullable = false, length = 20)

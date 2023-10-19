@@ -8,11 +8,14 @@ public class Search {
 	///Field
 	@Getter
 	private int currentPage;
+	@Getter
 	private String searchCondition;
+	@Getter
 	private String searchKeyword;
 	///Method
 	@Getter
 	private int pageSize;
+	@Getter
 	private String orderCondition;
 	private int endRowNum;
 	private int startRowNum;
@@ -26,26 +29,16 @@ public class Search {
 		this.pageSize = pageSize;
 	}
 
-	public void setCurrentPage(int curruntPage) {
-		this.currentPage = curruntPage;
+	public void setCurrentPage(int currentPage) {
+		this.currentPage = currentPage;
 	}
 
-	public String getSearchCondition() {
-		return searchCondition;
-	}
 	public void setSearchCondition(String searchCondition) {
 		this.searchCondition = searchCondition;
 	}
-	
-	public String getSearchKeyword() {
-		return searchKeyword;
-	}
+
 	public void setSearchKeyword(String searchKeyword) {
 		this.searchKeyword = searchKeyword;
-	}
-
-	public String getOrderCondition() {
-		return orderCondition;
 	}
 
 	public void setOrderCondition(String orderCondition) {

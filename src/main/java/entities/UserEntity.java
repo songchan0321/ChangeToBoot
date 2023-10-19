@@ -1,9 +1,6 @@
-package model;
+package entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -14,11 +11,11 @@ import lombok.ToString;
 @Setter
 @ToString
 
-public class PurchaseEntity {
+public class UserEntity {
 
     @Id
     @Column(name = "user_id", nullable = false, length = 20)
-    private String id;
+    private Long id;
 
     @Column(name = "user_name", nullable = false, length = 10)
     private String userName;

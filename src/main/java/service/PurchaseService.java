@@ -3,7 +3,7 @@ package service;
 import java.util.Map;
 
 import common.Search;
-import domain.Purchase;
+import dto.Purchase;
 
 public interface PurchaseService {
 

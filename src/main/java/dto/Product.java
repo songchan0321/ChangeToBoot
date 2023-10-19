@@ -1,11 +1,11 @@
-package domain;
+package dto;
 
 import java.sql.Date;
 
 
 public class Product {
 
-	private int prodNo;
+	private Long prodNo;
 	private String prodName;
 	private String prodDetail;
 	private String manuDate;
@@ -18,11 +18,11 @@ public class Product {
 	public Product() {
 	}
 
-	public int getProdNo() {
+	public Long getProdNo() {
 		return prodNo;
 	}
 
-	public void setProdNo(int prodNo) {
+	public void setProdNo(Long prodNo) {
 		this.prodNo = prodNo;
 	}
 

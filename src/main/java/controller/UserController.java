@@ -21,11 +21,11 @@ import com.model2.mvc.common.Page;
 import com.model2.mvc.common.Search;
 import com.model2.mvc.service.domain.User;
 import com.model2.mvc.service.user.UserService;
-import domain.User;
+import dto.User;
 import service.UserService;
 
 
-//==> ȸ������ Controller
+
 @Controller
 @RequestMapping("/user/*")
 public class UserController {
@@ -34,7 +34,7 @@ public class UserController {
 	@Autowired
 	@Qualifier("userServiceImpl")
 	private UserService userService;
-	//setter Method ���� ����
+
 		
 	public UserController(){
 		System.out.println(this.getClass());
@@ -85,7 +85,7 @@ public class UserController {
 		System.out.println("/getJsonUser/getUser : GET");
 		//Business Logic
 		User user = userService.getUser(userId);
-		// Model �� View ����
+
 		model.addAttribute("user", user);
 	}
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -97,7 +97,7 @@ public class UserController {
 		System.out.println("/user/updateUser : GET");
 		//Business Logic
 		User user = userService.getUser(userId);
-		// Model �� View ����
+
 		model.addAttribute("user", user);
 		
 		return "forward:/user/updateUser.jsp";
@@ -133,7 +133,8 @@ public class UserController {
 		System.out.println("/user/login : POST");
 		//Business Logic
 		User dbUser=userService.getUser(user.getUserId());
-		
+
+
 		if( user.getPassword().equals(dbUser.getPassword())){
 			session.setAttribute("user", dbUser);
 		}

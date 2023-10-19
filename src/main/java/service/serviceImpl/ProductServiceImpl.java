@@ -1,17 +1,15 @@
-package serviceImpl;
+package service.serviceImpl;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import domain.Product;
+import dto.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import common.Search;
-import domain.Product;
-import repository.ProductRepository;
 import service.ProductService;
 
 @Service("productServiceImpl")
@@ -42,7 +40,7 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Map<String , Object > getProductList(Search search) throws Exception {
-		List<Object> list = productService.getProductList(search);
+		List<Object> list = (List<Object>) productService.getProductList(search);
 		int totalCount = 0;
 		if(list.size()>0) totalCount=((Product)list.get(0)).getCount();
 		

@@ -4,9 +4,7 @@ import java.io.File;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -15,9 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import common.Page;
 import common.Search;
-import domain.Product;
+import dto.Product;
 import service.ProductService;
-import serviceImpl.ProductServiceImpl;
 
 @RestController
 @RequestMapping("/product")

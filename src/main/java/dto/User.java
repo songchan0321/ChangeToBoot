@@ -1,4 +1,4 @@
-package domain;
+package dto;
 
 import java.sql.Date;
 
@@ -7,7 +7,7 @@ import java.sql.Date;
 public class User {
 	
 	///Field
-	private String userId;
+	private Long userId;
 	private String userName;
 	private String password;
 	private String role;
@@ -28,10 +28,10 @@ public class User {
 	}
 	
 	///Method 
-	public String getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
-	public void setUserId(String userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 	public String getUserName() {

@@ -1,4 +1,4 @@
-package model;
+package entities;
 
 import jakarta.persistence.*;
 import lombok.Setter;
@@ -18,7 +18,7 @@ public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "prod_no")
-    private int no; //상품 코드
+    private Long no; //상품 코드
 
     @Column(name = "prod_name", nullable = false, length = 50)
     private String prodName; //상품 이름

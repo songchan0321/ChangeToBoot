@@ -1,18 +1,15 @@
-package serviceImpl;
+package service.serviceImpl;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import domain.Purchase;
+import dto.Purchase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import common.Search;
-import domain.Product;
-import domain.Purchase;
-import repository.PurchaseRepository;
 import service.PurchaseService;
 
 @Service("purchaseServiceImpl")

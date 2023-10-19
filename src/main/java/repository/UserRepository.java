@@ -1,7 +1,9 @@
 package repository;
 
-import domain.User;
+import dto.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository extends JpaRepository<User, Long> {
+
+
 }

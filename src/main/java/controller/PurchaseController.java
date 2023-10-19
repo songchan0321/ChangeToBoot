@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import domain.Purchase;
+import dto.Purchase;
+import service.ProductService;
 import service.PurchaseService;
+import service.UserService;
 
 @Controller
 @RequestMapping("/purchase/*")

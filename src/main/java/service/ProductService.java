@@ -3,7 +3,7 @@ package service;
 import java.util.Map;
 
 import common.Search;
-import domain.Product;
+import dto.Product;
 
 public interface ProductService {
 	public int addProduct(Product product) throws Exception;

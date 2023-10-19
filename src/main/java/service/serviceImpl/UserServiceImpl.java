@@ -1,19 +1,16 @@
-package serviceImpl;
+package service.serviceImpl;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import domain.User;
+import dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import common.Search;
-import domain.User;
 import service.UserService;
-import repository.UserRepository;
-
 
 
 @Service("userServiceImpl")
