@@ -16,7 +16,7 @@ import service.ProductService;
 public class ProductServiceImpl implements ProductService {
 
 	@Autowired
-	@Qualifier("productDaoImpl")
+	@Qualifier("productImpl")
 	ProductService productService;
 
 	public ProductServiceImpl() {

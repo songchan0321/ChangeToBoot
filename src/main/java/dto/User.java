@@ -1,11 +1,15 @@
 package dto;
 
+import lombok.Getter;
+
 import java.sql.Date;
 
 
 
+@Getter
 public class User {
-	
+
+	///Method
 	///Field
 	private Long userId;
 	private String userName;
@@ -26,41 +30,27 @@ public class User {
 	///Constructor
 	public User(){
 	}
-	
-	///Method 
-	public Long getUserId() {
-		return userId;
-	}
+
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-	public String getUserName() {
-		return userName;
-	}
+
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getPassword() {
-		return password;
-	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRole() {
-		return role;
-	}
+
 	public void setRole(String role) {
 		this.role = role;
 	}
-	public String getSsn() {
-		return ssn;
-	}
+
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
 	}
-	public String getPhone() {
-		return phone;
-	}
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 
@@ -70,33 +60,17 @@ public class User {
 			phone3 = phone.split("-")[2];
 		}
 	}
-	public String getAddr() {
-		return addr;
-	}
+
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
-	public String getEmail() {
-		return email;
-	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Date getRegDate() {
-		return regDate;
-	}
+
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
-	}
-
-	public String getPhone1() {
-		return phone1;
-	}
-	public String getPhone2() {
-		return phone2;
-	}
-	public String getPhone3() {
-		return phone3;
 	}
 
 	@Override
@@ -106,8 +80,6 @@ public class User {
 	}
 	
 	////////////////////////////////////////////////////////////////////////////////////////
-	// JSON ==> Domain Object  Binding�� ���� �߰��� �κ�
-	// POJO �� �߿伺
 	public void setPhone1(String phone1) {
 		this.phone1 = phone1;
 	}

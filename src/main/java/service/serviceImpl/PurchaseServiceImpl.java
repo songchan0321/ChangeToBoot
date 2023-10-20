@@ -16,7 +16,7 @@ import service.PurchaseService;
 public class PurchaseServiceImpl implements PurchaseService {
 
 	@Autowired
-	@Qualifier("purchaseDaoImpl")
+	@Qualifier("purchaseImpl")
 	PurchaseService purchaseService;
 	
 	public PurchaseServiceImpl() {

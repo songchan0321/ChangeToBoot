@@ -8,18 +8,19 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import common.Page;
 import common.Search;
 import dto.Product;
+import repository.ProductRepository;
 import service.ProductService;
 
 @RestController
 @RequestMapping("/product")
 public class ProductController {
-
+	@Autowired
+	ProductRepository productRepository;
 	@Autowired
 	private ProductService productService;
 
