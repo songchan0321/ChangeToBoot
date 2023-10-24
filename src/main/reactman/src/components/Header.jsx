@@ -2,6 +2,10 @@ import React, { useState } from "react";
 
 const headerNav = [
     {
+        title: "login",
+        url: "#login"
+    },
+    {
         title: "main",
         url: "#intro"
     },

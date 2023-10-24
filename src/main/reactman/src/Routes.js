@@ -9,11 +9,13 @@ import Port from "./components/Port";
 import Site from "./components/Site";
 import Skill from "./components/Skill";
 import Skip from "./components/Skip";
+import LoginButton from "./components/LoginButton";
 
 const Routes = () => {
     return (
         <Router>
             <Switch>
+                <Route path="/" component={LoginButton}/>
                 <Route path="/" exact component={Contact} />
                 <Route path="/" component={Footer} />
                 <Route path="/" component={Header} />

@@ -1,4 +1,5 @@
 import React from "react";
+import LoginButton from "../components/LoginButton";
 import Header from "../components/Header";
 import Skip from "../components/Skip";
 import Intro from "../components/Intro";
@@ -12,6 +13,7 @@ import Main from "../components/Main";
 const HomeView = () => {
     return (
         <>
+            <LoginButton/>
             <Skip />
             <Header />
             <Main>
