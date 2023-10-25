@@ -1,9 +1,9 @@
 import React from "react";
 
-const Site = () => {
+const Site = () => { //상품 배열
     const siteText = [
         {
-            text: ["Top", "스타일과 편안함을 완벽하게 조화시킨 상의"],
+            text: ["Top", "스타일과 편안함을 완벽하게 조화시킨 상의"], //상품 객체들
             title: "다양한 브랜드의 상의를 만나보세요",
             Link: "https://www.musinsa.com/app/",
             info: [
@@ -48,7 +48,7 @@ const Site = () => {
             ],
         },
     ];
-    return (
+    return ( //JSX로 상품섹션 반환
         <section id="site">
             <div className="site__inner">
                 <h2 className="site__title">Products<em>     상품</em></h2>

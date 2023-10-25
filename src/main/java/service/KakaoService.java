@@ -106,6 +106,4 @@ public class KakaoService {
                 .nickname(nickname).build();
     }
 
-
-
 }

@@ -1,4 +1,4 @@
-import Lenis from "@studio-freight/lenis";
+import Lenis from "@studio-freight/lenis"; //스크롤 애니메이션 구현
 
 const lenis = () => {
     const lenis = new Lenis({
@@ -8,7 +8,7 @@ const lenis = () => {
 
     function raf(time) {
         lenis.raf(time)
-        requestAnimationFrame(raf);
+        requestAnimationFrame(raf); //애니메이션 부드럽게 업데이트
     }
 
     requestAnimationFrame(raf);

@@ -7,7 +7,7 @@ const link = () => {
             const targetElement = document.querySelector(targetId);
 
             if(targetElement){
-                targetElement.scrollIntoView({ behavior: "smooth"});
+                targetElement.scrollIntoView({ behavior: "smooth"}); //부드러운 효과
             }
         });
     });
