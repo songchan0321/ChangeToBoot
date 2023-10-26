@@ -1,0 +1,40 @@
+server:
+  port: 3306
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/chanstore
+    username: chan
+    password: 3250
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      properties:
+        hibernate.format_sql: true
+    database: mysql
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache: false
+  profiles:
+    include: mysql
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+# kakao
+kakao:
+  client:
+    id: d4902b679b4cb9882b0b671908630d39
+    secret: whlUQrxiSqaMrWjM6crERmyxIs8EjymR
+  redirect:
+    url: http://localhost:3000/auth
+
+# token secret key
+jwt:
+  token:
+    key:

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const headerNav = [
     {
         title: "login",
-        url: "#login"
+        url: "https://kauth.kakao.com/oauth/authorize?client_id=d4902b679b4cb9882b0b671908630d39&redirect_uri=http://localhost:3000/auth&response_type=code"
     },
     {
         title: "main",

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HomeView from "./views/HomeView";
 import smooth from "./utils/smooth";
@@ -9,6 +9,7 @@ const App = () => {
         smooth();
         link();
     }, []);
+    const [loading, setLoading] = useState(true);
 
     return (
         <BrowserRouter>
@@ -16,6 +17,7 @@ const App = () => {
                 <Route path="/" element={<HomeView />} />
             </Routes>
         </BrowserRouter>
+
     );
 };
 
